@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+ 
+  <!-- The Basics -->
+  <groupId>org.k3yake</groupId>
+  <artifactId>java9-flow-examples</artifactId>
+  <version>1.0</version>
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+ 
+  <!-- Build Settings -->
+
+  <build>
+    <plugins>
+      <!-- target Java 9 -->
+      <plugin>
+	<artifactId>maven-compiler-plugin</artifactId>
+	<version>3.7.0</version>
+	<configuration>
+	  <!-- fork compilation and use the
+	       specified executable -->
+	  <fork>true</fork>
+	  <executable>javac8</executable>
+	</configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
